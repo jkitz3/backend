@@ -29,7 +29,7 @@ export class SignInBodyDto {
   password: string;
 }
 
-export class getSessionInfoDto {
+export class GetSessionInfoDto {
   @ApiProperty()
   id: string;
 

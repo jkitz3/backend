@@ -6,6 +6,12 @@ import { DbService } from 'src/db/db.service';
 export class AccountService {
   constructor(private db: DbService) {}
 
+  async create(userId: string) {
+    return this.db.account.create({
+      data: { ownerId: userId, isBlockingEnabled: false },
+    });
+  }
+
   async getAccount(userId: string) {
     return this.db.account.findFirstOrThrow({ where: { ownerId: userId } });
   }

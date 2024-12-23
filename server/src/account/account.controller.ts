@@ -4,7 +4,7 @@ import { AccountDto, PatchAccountDto } from './dto';
 import { AccountService } from './account.service';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { SessionInfo } from 'src/auth/session-info.decorator';
-import { getSessionInfoDto } from 'src/auth/dto';
+import { GetSessionInfoDto } from 'src/auth/dto';
 
 @Controller('account')
 @UseGuards(AuthGuard)
@@ -15,7 +15,7 @@ export class AccountController {
   @ApiOkResponse({
     type: AccountDto,
   })
-  getAccount(@SessionInfo() session: getSessionInfoDto): Promise<AccountDto> {
+  getAccount(@SessionInfo() session: GetSessionInfoDto): Promise<AccountDto> {
     return this.accountService.getAccount(session.id);
   }
 
@@ -25,7 +25,7 @@ export class AccountController {
   })
   patchAccount(
     @Body() body: PatchAccountDto,
-    @SessionInfo() session: getSessionInfoDto,
+    @SessionInfo() session: GetSessionInfoDto,
   ): Promise<AccountDto> {
     return this.accountService.patchAccount(session.id, body);
   }
