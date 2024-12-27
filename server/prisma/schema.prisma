@@ -15,10 +15,8 @@ datasource db {
 
 model User {
   id        String @id @default(uuid())
-  // phone     String @unique
   email     String @unique
   createdAt DateTime @default(now()) @map("created_at")
-  // updatedAt DateTime @map("updated_at")
   roles     Role[]
   token     Token[]
   // TODO: hash and salt uses with auth via cookie https://www.youtube.com/watch?v=vrjPzp-bZJo&t=8s
