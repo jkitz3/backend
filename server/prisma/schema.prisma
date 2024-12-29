@@ -47,3 +47,5 @@ enum Role {
   USER
   GUEST
 }
+
+// TODO: guest functional 
