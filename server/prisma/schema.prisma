@@ -46,7 +46,4 @@ model Token {
 enum Role {
   ADMIN
   USER
-  GUEST
 }
-
-// TODO: guest functional 
