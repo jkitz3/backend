@@ -48,5 +48,4 @@ enum Role {
   USER
   GUEST
   OWNER
-  GUEST_OWNER
 }
