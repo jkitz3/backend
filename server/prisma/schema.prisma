@@ -48,5 +48,4 @@ enum Role {
   ADMIN
   USER
   GUEST
-  OWNER
 }
