@@ -19,7 +19,7 @@ model User {
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt  DateTime @map("updated_at")
   roles     Role[]
-  token     Token[]
+  tokens     Token[]
   // TODO: hash and salt uses with auth via cookie https://www.youtube.com/watch?v=vrjPzp-bZJo&t=8s
   hash      String
   salt      String
