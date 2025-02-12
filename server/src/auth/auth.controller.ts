@@ -69,5 +69,7 @@ export class AuthController {
   @UseGuards(AuthGuard)
   getSessionInfo(@SessionInfo() session: GetSessionInfoDto) {
     return session;
+    console.log(session);
+    // TODO: delete console log
   }
 }
