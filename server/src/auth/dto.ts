@@ -34,7 +34,7 @@ export class GetSessionInfoDto {
   id: string;
 
   @ApiProperty({
-    example: 'test22@gmail.com',
+    example: 'test23@gmail.com',
   })
   email: string;
 
